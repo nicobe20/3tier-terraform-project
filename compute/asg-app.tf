@@ -4,7 +4,7 @@ resource "aws_autoscaling_group" "app-asg" {
     max_size = 2
     min_size = 1
 
-    target_group_arns = [ aws_lb_target_group.target-group-app.arb ]
+    target_group_arns = [ aws_lb_target_group.target-group-app.arn ]
     health_check_type = "EC2"
     vpc_zone_identifier = [ aws_subnet.app-subnet1.id, aws_subnet.app-subnet2.id ]
 

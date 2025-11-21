@@ -9,7 +9,7 @@ resource "aws_security_group" "asg-security-group-app" {
         from_port = 80
         to_port = 80
         protocol = "tcp"
-        security_groups = [ aws_security_group.alb-security_group-app.id ]
+        security_groups = [ aws_security_group.alb-security-group-app.id ]
     
     }
 
@@ -18,7 +18,7 @@ resource "aws_security_group" "asg-security-group-app" {
         from_port = 22 
         to_port = 22
         protocol = "tcp"
-        security_groups = [ aws_security_group.asg-security_group-web.id ]
+        security_groups = [ aws_security_group.asg-security-group-web.id ]
     }
 
     egress {
