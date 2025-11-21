@@ -3,7 +3,7 @@ variable "region-name" {
   
 }
 
-variable "vpc-cidr_block" {
+variable "vpc-cidr-block" {
     description = "CIDR block for the vpc"
     
 }
