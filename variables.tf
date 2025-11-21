@@ -113,10 +113,6 @@ variable "instance-type" {
     description = "value for the instance type"
   
 }
-variable "key-name" {
-    description = "value for the key name"
-  
-}
 
 variable "web-instance-name" {
     description = "value for web instances"
@@ -207,10 +203,5 @@ variable "db-sg-name" {
 
 variable "db-subnet-grp-name" {
     description = "Name for the subnet group"
-  
-}
-
-variable "app-db-sg-name" {
-    description = "Name for the app-db sec"
   
 }

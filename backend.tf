@@ -1,7 +1,12 @@
+# Local backend - state file will be stored locally as terraform.tfstate
+# For production, consider using S3 backend for remote state storage
 terraform {
-  backend "s3" {
-    bucket = "three-tier-architecture-bucket"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
+  required_version = ">= 1.0"
+  
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
   }
 }
